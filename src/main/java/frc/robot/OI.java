@@ -12,8 +12,7 @@ public class OI {
     }
     
 
-    
-    } public double getleftx(){
+        public double getleftx(){
         return pilot.getRawAxis(Robotmap.joystickx);
     
     }
