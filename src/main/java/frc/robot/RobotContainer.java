@@ -29,7 +29,6 @@ public class RobotContainer {
 
     chassis = new Drivetrain();
 
-    chassis.setDefaultCommand(new DefaultDrive());
   }
 
   /**
