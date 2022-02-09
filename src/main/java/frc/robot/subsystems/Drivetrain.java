@@ -35,8 +35,8 @@ public Drivetrain ()
      
      rightMotorPort = new TecbotSpeedController(Robotmap.rightMotorPort,  TypeOfMotor.TALON_SRX) ;
      rightMotorPort1 = new TecbotSpeedController (Robotmap.rightMotorPort1, TypeOfMotor.TALON_SRX);
-     //rightMotorPort.isInverted();
-     //rightMotorPort.isInverted();
+     rightMotorPort.setInverted(true);
+     rightMotorPort.setInverted(true);;;
 
 
      leftMotorPort = new TecbotSpeedController (Robotmap.leftMotorPort, TypeOfMotor.TALON_SRX);
@@ -62,11 +62,19 @@ public void driveTank(double y, double x)
     leftMotorPort.set(leftSpeed);
     leftMotorPort1.set(leftSpeed);
 
-    rightMotorPort.set(-rightSpeed);
-    rightMotorPort1.set(-rightSpeed);
+    rightMotorPort.set(rightSpeed);
+    rightMotorPort1.set(rightSpeed);
 
-    System.out.println("x is: " + x);    
-    System.out.println("y is: " + y);
+    
+   // leftMotorPort.set(y);
+   // leftMotorPort1.set(y);
+
+   // rightMotorPort.set(x);
+   // rightMotorPort1.set(x);
+
+
+    //System.out.println("x is: " + x);    
+    //System.out.println("y is: " + y);
 
 
 } ;
